@@ -1,0 +1,328 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+}
+
+.grid-container {
+  height: 100%;
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+}
+
+header {
+  grid-area: header;
+  background-color: #203040;
+}
+
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #203040;
+  color: #fff;
+}
+
+/* ---------------------- Headings --------------------- */
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+}
+
+/* ---------------------- Anchor --------------------- */
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8000;
+}
+
+header a {
+  color: #fff;
+  padding: 1rem;
+}
+
+header a.brand {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+header a.brand:hover {
+  color: #ff8000;
+}
+
+.badge {
+  margin-left: 0.2rem;
+  padding: 0.2rem 0.7rem;
+  background-color: #f02020;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.4rem;
+}
+
+/* ---------------------- Lists --------------------- */
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 1rem;
+}
+
+/* ---------------------- Row --------------------- */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row.center {
+  justify-content: center;
+}
+
+.row.top {
+  align-items: flex-start;
+}
+
+.min-30 {
+  min-width: 30rem;
+}
+
+/* ---------------------- Column --------------------- */
+
+.col-1 {
+  flex: 1 1 25rem;
+}
+
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+/* ---------------------- Image --------------------- */
+
+img {
+  border-radius: 0.5rem;
+}
+
+img.large {
+  width: 100%;
+}
+
+img.medium {
+  max-width: 29rem;
+  width: 100%;
+}
+
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+
+/* ---------------------- Card --------------------- */
+
+.card {
+  margin: 1rem;
+  border: 0.1rem #c0c0c0 solid;
+  border-radius: 0.5rem;
+  background-color: #f8f8f8;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 2rem;
+}
+
+.rating span {
+  color: #f0c040;
+  margin: 0.1rem;
+}
+
+.rating span:last-child {
+  color: #404040;
+}
+
+/* ---------------------- Colors --------------------- */
+
+.success {
+  color: #20a020;
+}
+
+.danger {
+  color: #a02020;
+}
+
+.alert {
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+
+.alert-info {
+  color: #2020a0;
+  background-color: #e0e0ff;
+}
+
+.alert-danger {
+  color: #a02020;
+  background-color: #ffe0e0;
+}
+
+.alert-success {
+  color: #20a020;
+  background-color: #eeffe0;
+}
+
+.loading {
+  display: block!important;
+
+}
+
+/* ---------------------- Inputs --------------------- */
+input, select, textarea, button {
+  padding: 1rem;
+  border: 0.1rem #a4a4a4 solid;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+}
+
+input:hover, select:hover, textarea:hover{
+  border: 0.1rem #040404 solid;
+}
+
+/* ---------------------- Buttons --------------------- */
+
+button {
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 0.1rem #040404 solid;
+}
+
+button.primary {
+  background-color: #f0c040;
+  color: #fff;
+}
+
+button.block {
+  width: 100%;
+}
+
+button.small {
+  font-size: 1.2rem;
+}
+
+/* ---------------------- Form --------------------- */
+.form {
+  margin: 0 auto;
+  max-width: 60rem;
+}
+
+.form > div {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  margin: 1rem 0;
+}
+
+/* ---------------------- Dropdown --------------------- */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.dropdown-content {
+  margin: 0;
+  margin-top: 0.4rem;
+  padding: 1rem;
+  display: none;
+  position: absolute;
+  right: 0;
+  min-width: 12rem;
+  background-color: #203040;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
+/* ---------------------- Checkout Steps --------------------- */
+.checkout-steps > div {
+  padding: 1rem;
+  flex: 1;
+  border-top: 0.3rem solid #c0c0c0;
+  color: #c0c0c0;
+  font-weight: bold;  
+}
+
+.checkout-steps > .active {
+  border-top: 0.3rem solid #f08000;
+  color: #f08000;
+}
+
+/* ---------------------- Table --------------------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+
+.table td, .table th {
+  padding: 0.5rem;
+  border: 0.1rem solid #e4e4e4;
+  text-align: center;
+}
+
+.table button {
+  margin: 0 0.2rem;
+}
+/* ---------------------- End --------------------- */
